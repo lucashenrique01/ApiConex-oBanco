@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="fale.css" />
+    <link rel="stylesheet" href="cabecalho_rodape.css" />
+  </head>
+  <body>
+    <div class="header">
+      <ul class="home">
+        <!-- lista dos elementos a esquerda -->
+        <li id="li_home"><a href="index.html">Home</a></li>
+      </ul>
+      <!-- lista dos elementos a direita -->
+      <ul class="lista_direita">
+        <li id="li_login"><a href="./log.html">Login</a></li>
+        <li id="li_cadastro">
+          <a href="./log_cad.html" onclick="abrir_cad()">Cadastro</a>
+        </li>
+        <li id="li_contato"><a href="./fale.html">Contato</a></li>
+        <li id="li_servicos"><a href="./servicos.html">serviços</a></li>
+        <li id="li_sobre"><a href="index.html#quem_somos">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="gobal">
+      <div id="img"><img src="./img/img.png" /></div>
+      <div class="forma1">
+        <div class="forma2">
+          <span id="faleC">Fale Conosco</span>
+          <section>
+            <form action="">
+              <div class="input-container">
+                <input
+                  id="name"
+                  class="input"
+                  type="text"
+                  pattern=".+"
+                  required
+                />
+                <label class="label" for="name">Nome</label>
+              </div>
+              <div class="input-container">
+                <input
+                  id="email"
+                  class="input"
+                  type="text"
+                  pattern=".+"
+                  required
+                />
+                <label class="label" for="email">E-mail</label>
+              </div>
+              <div class="input-container">
+                <input
+                  id="descricao"
+                  class="input"
+                  type="text"
+                  pattern=".+"
+                  required
+                />
+                <label class="label" for="descricao">Descrição</label>
+              </div>
+            </form>
+          </section>
+        </div>
+        <button onclick="enviar()">Enviar</button>
+      </div>
+    </div>
+
+    <div class="footer">
+        <!--  elementos a direita -->
+        <p id="direitos_reservados"> © 2021. ILUMEM Todos os Direitos Reservados</p>
+        <!-- lista dos elementos a esquerda -->
+        <ul class="lista_footer">
+          <img src="img/whatsapp.png" />
+          <li><a href="">(11)9999-999</a></li>
+          <img src="img/email.png" />
+          <li><a href="">contato@ilumen.com.br</a></li>
+        </ul>
+        <ul class="lista_footer">
+          <img src="img/facebook.png" />
+          <li><a href="">facebook.com/ilumen</a></li>
+          <img src="img/instagram.png" />
+          <li><a href="">@Ilumen</a></li>
+        </ul>
+      </div>
+  </body>
+</html>
+<script>
+  function enviar(){
+   if (email.value.indexOf("@") == -1 || email.value.indexOf(".com") == -1 ) {
+
+   alert("email inválido")
+ } 
+ else {
+  alert("Mensagem eviada com sucesso");
+  document.getElementById('name').value="";
+    document.getElementById('email').value="";
+    document.getElementById('descricao').value="";
+ }
+}
+</script>

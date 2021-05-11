@@ -1,0 +1,89 @@
+/*Definindo posicao das divs de servicos*/
+    
+/*Definindo tamanho e posicao da */
+.div_conter{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.div_form{
+    width: 408px;
+    height: 500px;
+    background: #E0E7EE;
+    padding-left: 50px;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.btn{
+    margin-top: 40px;
+    font-size: 21px;
+    padding: 14px 35px;
+    border-radius: 12px;
+    background-color:  #E0E7EE;
+    border: 2px solid black;
+    
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    
+  }
+.div_log{
+    font-size: 21px;
+    margin-top: 40px;
+    
+}
+.btn_entra{
+    margin-top: 28px;
+    margin-left: 105px;
+    font-size: 21px;
+    padding: 10px 35px;
+    border-radius: 12px;
+    background-color: #2061C2;
+    border: 2px solid #2061C2;
+    color: white;
+    
+}
+.btn_entra:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    
+  }
+.div_cad{
+    display: none;
+    font-size: 21px;
+    margin-top: 15px;
+}
+input{
+    width: 350px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color:  #E0E7EE;
+
+}
+.div_image{
+    width: 40%;
+    float: left;
+    
+}
+.imagem{
+    width: 100%;
+    margin-left: 15%;
+}
+.main{
+    width: 100%;
+    height: 550px;
+}
+
+
+.a_esqueci{
+    left: 222px; 
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+}

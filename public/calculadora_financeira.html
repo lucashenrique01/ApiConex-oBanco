@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="cabecalho_rodape.css">
+    <link rel="stylesheet" href="style_grafico.css">
+</head>
+
+<body > 
+    <div class="header">
+        <ul class="home">
+            <!-- lista dos elementos a esquerda -->
+            <li id="li_home"><a href="index.html">Home</a></li>
+        </ul>
+        <!-- lista dos elementos a direita -->
+        <ul class="lista_direita">
+            <li id="li_login"><a href="./log.html">Login</a></li>
+            <li id="li_cadastro">
+                <a href="./log_cad.html" onclick="abrir_cad()">Cadastro</a>
+            </li>
+            <li id="li_contato"><a href="./fale.html">Contato</a></li>
+            <li id="li_servicos"><a href="./servicos.html">serviços</a></li>
+            <li id="li_sobre"><a href="index.html#quem_somos">Sobre</a></li>
+
+        </ul>
+    </div>
+    
+    <div class="conteiner">
+        
+        <div class="conteudo">
+            <b>Digite valor médio mensal gasto em indenizações: </b><input id="num1" placeholder="Insira gastos em R$">
+            <br>
+            <br>
+            <button onclick="calcular()">Calcular</button> <button onclick="limpar()">Limpar</button>
+            <br>
+            <br>
+            <div id="resposta">
+            </div>
+            <br>
+            <div style="width: 60%; " id="barras">
+                <div style=" text-align: center;" id="cor1"></div>
+                <div style=" float: left; text-align: center;" id="cor2"></div>
+                <div style=" float: left; text-align: center; " id="cor3"></div>
+            </div>
+        </div>
+        <div class="graph"  style="display: none;" id="idCanvas">
+            <canvas id="grafico"></canvas>
+        </div>
+
+    </div>
+
+    <div class="footer" id="teste">
+        <!--  elementos a direita -->
+        <p id="direitos_reservados"> © 2021. ILUMEM Todos os Direitos Reservados</p>
+        <!-- lista dos elementos a esquerda -->
+        <ul class="lista_footer">
+            <img src="img/whatsapp.png" />
+            <li><a href="">(11)9999-999</a></li>
+            <img src="img/email.png" />
+            <li><a href="">contato@ilumen.com.br</a></li>
+        </ul>
+        <ul class="lista_footer">
+            <img src="img/facebook.png" />
+            <li><a href="">facebook.com/ilumen</a></li>
+            <img src="img/instagram.png" />
+            <li><a href="">@Ilumen</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+    function calcular() {
+        var n1 = Number(num1.value);
+        var resultado = n1 * 6;
+        var economia = resultado * 0.36;
+        var diferenca = resultado - economia;
+        var barraDiferenca = (100 * diferenca) / resultado;
+        var barraEconomia = (100 * economia) / resultado;
+
+        var resultado = resultado.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        var economia = economia.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        var diferenca = diferenca.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+
+
+
+        resposta.innerHTML = (` Isso representa um gasto médio semetral de: <b>${resultado}</b>.<br>
+        Com a nossa solução, seus gastos serão de: <b>${diferenca}</b>.<br>
+        Uma economia de: <b>${economia}</b>.`);
+        cor1.style.width = (`100%`);
+        cor1.style.height = "30px";
+        cor1.style.backgroundColor = "#D3D3D3";
+        cor1.innerHTML = (`<b style="color:#363636">(${resultado})</b> `);
+        cor2.style.width = (`${barraDiferenca}%`);
+        cor2.style.height = "30px";
+        cor2.style.backgroundColor = "Tomato";
+        cor2.innerHTML = (` <b style="color:#363636">(${diferenca}) </b>`);
+        cor3.style.width = (`${barraEconomia}%`);
+        cor3.style.height = "30px";
+        cor3.style.backgroundColor = "#3CB371";
+        cor3.innerHTML = (` <b style="color:#363636">(${economia}) </b>`);
+        teste.style.marginTop = "14%";
+       
+
+       
+
+
+        
+
+    }
+
+    function limpar() {
+        document.location.reload(true);
+    }
+</script>

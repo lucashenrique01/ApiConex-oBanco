@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.body {
+  background-image: ("./img/fundo.jpg");
+}
+
+.graph {
+  background-color: #eaeaea;
+  display: inline-block;
+  width: 60%;
+  height: 250px;
+  margin: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+
+.conteiner {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+.conteudo {
+  padding-top: 20px;
+  margin-left: 8px;
+  text-align: center;
+}
+
+#barras {
+  width: 60%;
+  margin-left: 20%;
+}
+
+#cor1, #cor2, #cor3 {
+  padding-top: 10px;
+}
+
+#num1 {
+  
+  width: 120px;
+  border-bottom: 2px solid #001a35;
+}
+
+.conteudo button {
+  color: white;
+  font-size: 18px;
+  background-color: #001a35;
+  width: 90px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
+}

@@ -1,0 +1,109 @@
+/* Corpo do trabalho*/
+.img_smart {
+  float: left;
+  height: 600px;
+}
+
+.img_smart img {
+  width: 100%;
+}
+
+.div_grande_pd1 {
+  width: 100%;
+  height: 550px;
+  background-color: #001a35;
+  float: left;
+}
+
+.div_grande_pd2 {
+  width: 100%;
+  height: 500px;
+  float: left;
+}
+.titulo {
+  width: 40%;
+  height: 30px;
+  margin-top: 25px;
+  float: left;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.retangulo_1 {
+  width: 30%;
+  height: 15px;
+  background-color: #fbe201;
+  float: left;
+  margin-top: 40px;
+  border-radius: 1px;
+}
+
+.retangulo_2 {
+  width: 30%;
+  height: 15px;
+  background-color: #fbe201;
+  float: right;
+  margin-top: 40px;
+  border-radius: 1px;
+}
+.img_hld {
+  width: 45%;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.img_hld img {
+  float: left;
+  width: 100%;
+}
+.img_lampada {
+  width: 30%;
+}
+
+.img_lampada img {
+  float: left;
+  width: 100%;
+}
+
+.texto {
+  float: right;
+  width: 65%;
+  height: 200px;
+  margin-right: 5%;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.texto_pd2 {
+  float: right;
+  width: 60%;
+  height: 200px;
+  margin-right: 5%;
+  margin-top: 5%;
+  text-align: justify;
+  font-size: 25px;
+}
+
+.texto_pd3 {
+  float: left;
+  width: 50%;
+  height: 300px;
+  margin-left: 20px;
+  margin-top: 1px;
+  text-align: justify;
+  font-size: 25px;
+}
+
+.texto p {
+  padding-top: 20px;
+}
+
+.texto_pd2 p {
+  padding-top: 20px;
+}
+
+.texto_pd3 p {
+  padding-top: 20px;
+}

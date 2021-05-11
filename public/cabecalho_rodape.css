@@ -1,0 +1,92 @@
+/*Tirando borda dos corpo html*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: padrao;
+}
+
+@font-face {
+  font-family: padrao;
+  src: url(font/Louis\ George\ Cafe\ Bold.ttf);
+}
+/* definindo largura altura  e cor de fundo para o header */
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #001a35;
+  border-bottom: solid 1px #fbe201;
+}
+/*Retirando os topicos da lista,transformando em uma lista  horizontal  e colocando    em   maisculo   */
+.header ul li {
+  display: inline;
+  text-transform: uppercase;
+}
+/* Tirando a decoração a cor e sublinhado da tag A e definindo a cor da letra*/
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+/*Definindo a posicao dos elementos dentro do Header*/
+#li_home {
+  margin-top: 15px;
+  margin-left: 25px;
+  float: left;
+}
+#li_sobre,
+#li_servicos,
+#li_contato,
+#li_cadastro,
+#li_login {
+  float: right;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+#li_login {
+  margin-right: 25px;
+}
+
+/*definindo posição footer para a div , largura, altura  e cor de fundo */
+.footer {
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 60px;
+  float: left;
+  background-color: #fffafa;
+  border-top: solid 2px #fbe201;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
+/*Retirando os topicos da lista,transformando em uma lista  horizontal*/
+.footer ul li {
+  display:table-footer-group;
+}
+/*Definindo a posiçao dos elementos dentro do footer*/
+.lista_footer{
+    width: 25%;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+.lista_footer img{
+    width: 18px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+#direitos_reservados {
+  float: right;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-right: 5px;
+}

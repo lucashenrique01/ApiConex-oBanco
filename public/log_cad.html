@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="log_cad.css" />
+    <link rel="stylesheet" href="cabecalho_rodape.css" />
+    <title>Iluminium</title>
+  </head>
+  <body>
+    <!--Header da pagina-->
+    <div class="header">
+      <ul class="home">
+        <!-- lista dos elementos a esquerda -->
+        <li id="li_home"><a href="index.html">Home</a></li>
+      </ul>
+      <!-- lista dos elementos a direita -->
+      <ul class="lista_direita">
+        <li id="li_login"><a href="./log.html">Login</a></li>
+        <li id="li_cadastro">
+          <a href="./log_cad.html" onclick="abrir_cad()">Cadastro</a>
+        </li>
+        <li id="li_contato"><a href="./fale.html">Contato</a></li>
+        <li id="li_servicos"><a href="./servicos.html">serviços</a></li>
+        <li id="li_sobre"><a href="index.html#quem_somos">Sobre</a></li>
+      </ul>
+    </div>
+    <!-- Corpo principal da pagina-->
+    <div class="main">
+      <div class="div_conter">
+        <div class="div_form">
+          <button onclick="login()" class="btn">Login</button>
+          <button onclick="cadastro()" class="btn" style="margin-left: 25px">
+            Cadastro
+          </button>
+          <div id="log" class="div_log">
+            <br><br>Usuário:<br>
+            <input id="id_usuário"><br><br><br>
+            Senha:<br>
+            <input type="password" id="id_senhaLog">
+            <a href="" class="a_esqueci">Esqueci a senha</a>
+            <br><button onclick="entrar()" class="btn_entra">Entrar</button>
+          </div>
+          <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+          <div id="cad" class="div_cad">
+            Nome:<br>
+            <input id="id_nome" name="nome"><br><br>
+            E-mail:<br>
+            <input id="id_email" name="email"><br><br>
+            CNPJ:<br>
+            <input maxlength="18" id="id_cnpj" name="cnpj" placeholder="XX.XXX.XXX/0001-XX"><br><br>
+            Senha:<br>
+            <input type="password" name="senha" id="id_senhaCad" placeholder="Digite no mínimo 8 caracteres">
+            <br>            
+            <button class="btn_entra">Cadastrar</button>
+          </form>
+          </div>
+        </div>
+      </div>
+      <div class="div_image">
+        <img src="./img/login.png" class="imagem" />
+    <div class="footer">
+      <!--  elementos a direita -->
+      <p id="direitos_reservados"> © 2021. ILUMEM Todos os Direitos Reservados</p>
+      <!-- lista dos elementos a esquerda -->
+      <ul class="lista_footer">
+        <img src="img/whatsapp.png" />
+        <li><a href="">(11)9999-999</a></li>
+        <img src="img/email.png" />
+        <li><a href="">contato@ilumen.com.br</a></li>
+      </ul>
+      <ul class="lista_footer">
+        <img src="img/facebook.png" />
+        <li><a href="">facebook.com/ilumen</a></li>
+        <img src="img/instagram.png" />
+        <li><a href="">@Ilumen</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script>
+  function cadastro() {
+    document.getElementById("cad").style.display = "block";
+    document.getElementById("log").style.display = "none";
+  }
+  function login() {
+    document.getElementById("log").style.display = "block";
+    document.getElementById("cad").style.display = "none";
+  }
+
+
+function entrar(){
+var usuario = id_usuário.value;
+var senha = id_senhaLog.value;
+  if (usuario == "admin" && senha =="12345678" ) {
+    window.location.href = "./NODE4.1/dashboardADM.html";
+
+  } 
+  else if(usuario == "user" && senha =="98765432" ){
+    window.location.href = "./NODE4.1/dashboard.html";
+
+  }
+ else {
+  alert("Usuário ou Senha Inválidos")
+ }
+
+}
+
+
+  function cadastrar() {
+        
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+              alert("Usuário cadastrado com sucesso!")
+              window.location.href = "./log.html";
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                
+            }
+        });
+
+        return false;
+    }
+
+</script>

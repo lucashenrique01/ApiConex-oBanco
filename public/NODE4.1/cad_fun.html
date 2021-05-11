@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../log_cad.css">
+    <link rel="stylesheet" href="../cabecalho_rodape.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Iluminium</title>
+</head>
+
+<body>
+    <!--Header da pagina-->
+    <div class="header">
+        <ul class="home">
+            <!-- lista dos elementos a esquerda -->
+            <li id="li_home"><button onclick="sair()" class="btn_estilo"><a>Home</a></button></li>
+        </ul>
+        <!-- lista dos elementos a direita -->
+        <ul class="lista_direita">
+
+            <li id="li_sobre"><button class="btn_estilo"><a href="dashboardADM.html">Voltar</a></button></li>
+        </ul>
+    </div>
+    <!-- Corpo principal da pagina-->
+    <div class="main">
+        <div class="div_conter">
+          <div class="div_form">
+            <div id="cad" class="div_cad" style="display: block;padding-top: 10%;">
+              Nome:<br>
+              <input id="id_nome" ><br><br>
+              E-mail:<br>
+              <input id="id_email"><br><br>
+              Cargo:<br>
+              <input id="id_cargo"><br><br>
+              Selecione um tipo de conta:<br>
+              <select id="id_tipoConta" style="width:350px;">
+                  <option value="U">Usuário</option>
+                  <option value="A">Administrador</option>
+              </select><br><br>
+              Senha:<br>
+              <input type="password" id="id_senhaCad" placeholder="Digite no mínimo 8 caracteres">
+              <br><button onclick="cadastrar()" class="btn_entra">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+        <div class="div_image">
+            <img src="../img/login.png" class="imagem">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function cadastro() {
+        document.getElementById("cad").style.display = "block";
+        document.getElementById("log").style.display = "none";
+    }
+    function login() {
+        document.getElementById("log").style.display = "block";
+        document.getElementById("cad").style.display = "none";
+    }
+    function sair(){
+        if(confirm("Dseja realmente sair?")){
+            window.location.href = "../index.html";
+        }
+    }
+  function cadastrar() {
+  var nome = id_nome.value;
+  var email = id_email.value;
+  var senha = id_senhaCad.value;
+  if (nome.length <3 ) {
+    alert("Nome Inválido")
+  } 
+  else if (email.indexOf("@") == -1 || email.indexOf(".com") == -1 ) {
+
+    alert("email inválido")
+
+  } 
+  else if (senha.length < 8){
+
+    alert("senha inválido")
+  } 
+  else {
+    alert("cadastrado com sucesso");
+    document.getElementById('id_nome').value="";
+    document.getElementById('id_email').value="";
+    document.getElementById('id_cnpj').value="";
+    document.getElementById('id_senhaCad').value="";
+ }
+}
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cabecalho_rodape.css">
+    <link rel="stylesheet" href="servicos.css">
+    <title>SERVIÇOS</title>
+</head>
+<body>
+    <!--Header da pagina-->
+    <div class="header">  
+    <ul class="home">
+        <!-- lista dos elementos a esquerda -->
+        <li id="li_home"><a href="./index.html">Home</a></li>
+    </ul>
+    <!-- lista dos elementos a direita -->
+    <ul class="lista_direita">
+        <li id="li_login"><a href="./log.html">Login</a></li>
+        <li id="li_cadastro">
+            <a href="./log_cad.html" onclick="abrir_cad()">Cadastro</a>
+        </li>
+        <li id="li_contato"><a href="./fale.html">Contato</a></li>
+        <li id="li_servicos"><a href="./servicos.html">serviços</a></li>
+        <li id="li_sobre"><a href="./index.html#quem_somos">Sobre</a></li>
+      </ul>
+    </div>
+    <!-- Corpo principal da pagina-->
+        <div class="div_grande_pd2">
+            <div class="retangulo_1" style="background-color: #001A35;"></div>
+            <h1 class="titulo" style="color: #F6AF0A;">SERVIÇOS</h1>
+            <div class="retangulo_2" style="background-color: #001A35;"></div>
+            <div class="img_lampada"><img src="./img/Luz.png" ></div>    
+            <div class="texto_pd2">   
+                <p>
+                    Quando um sensor identifica mau funcionamento na luz dos postes, 
+                    nós enviamos um alerta para os responsáveis pela iluminação pública, 
+                    sinalizando que o poste precisa de manutenção.
+                </p>
+                <p>
+                    Nós liberamos os dados e o status do processo da manutenção para os nossos clientes, 
+                    que os utilizam para melhoria do próprio sistema.
+                    <br>
+                    <br>
+                    <button class="btn"  onclick="tela()"> Simulador</button>
+                </p>
+            </div>               
+        </div>
+        <div class="div_grande_pd2">
+            <div class="retangulo_1" style="background-color: #001A35;"></div>
+            <h1 class="titulo" style="color: #F6AF0A;">SOLUÇÃO</h1>
+            <div class="retangulo_2" style="background-color: #001A35;"></div>
+            <div class="img_hld"><img src="img/hld.png" ></div>    
+            <div class="texto_pd3">   
+                <p>
+                    Quando um sensor identifica mau funcionamento na luz dos postes, 
+                    nós enviamos um alerta para os responsáveis pela iluminação pública, 
+                    sinalizando que o poste precisa de manutenção.
+                </p>
+                <p>
+                    Nós liberamos os dados e o status do processo da manutenção para os nossos clientes, 
+                    que os utilizam para melhoria do próprio sistema.         
+                </p>  
+                </p>
+            </div>               
+        </div>
+       
+    <!--Footer da pagina-->
+    <div class="footer">
+        <!--  elementos a direita -->
+        <p id="direitos_reservados"> © 2021. ILUMEM Todos os Direitos Reservados</p>
+        <!-- lista dos elementos a esquerda -->
+        <ul class="lista_footer">
+          <img src="img/whatsapp.png" />
+          <li><a href="">(11)9999-999</a></li>
+          <img src="img/email.png" />
+          <li><a href="">contato@ilumen.com.br</a></li>
+        </ul>
+        <ul class="lista_footer">
+          <img src="img/facebook.png" />
+          <li><a href="">facebook.com/ilumen</a></li>
+          <img src="img/instagram.png" />
+          <li><a href="">@Ilumen</a></li>
+        </ul>
+      </div>
+    
+</body>
+</html>
+
+<script>
+    function tela(){
+        window.location.href = "./calculadora_financeira.html";
+    }
+    </script>
